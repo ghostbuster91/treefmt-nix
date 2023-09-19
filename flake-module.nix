@@ -21,7 +21,7 @@ in
             used by the `nix fmt` command.
           '';
           type = types.submoduleWith {
-            modules = (import ./.).all-modules pkgs ++ [{
+            modules = (import ./.).all-modules (pkgs // { inherit (inputs) ktfmt; }) ++ [{
               options.flakeFormatter = lib.mkOption {
                 type = types.bool;
                 default = true;
