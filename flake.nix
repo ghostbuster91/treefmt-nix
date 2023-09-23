@@ -1,7 +1,7 @@
 {
   description = "treefmt nix configuration modules";
 
-  inputs.nixpkgs.url = "github:ghostbuster91/nixpkgs/ktfmt-2";
+  inputs.nixpkgs.url = "github:nixos/nixpkgs";
 
   outputs = { self, nixpkgs }:
     let
